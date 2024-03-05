@@ -1,19 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Form Sederhana</title>
-    <link rel="icon" type="image/png" href="gambar/icon.png" sizes="16x16" />
+    <title>Tipe Input</title>
+    <link rel="icon" type="image/png" href="html_dasar/html_dasar/gambar/icon.png" sizes="16x16" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
-    <form action="/action_page.php" method="post">
-        <label for="nama_depan">Nama depan: </label><br>
-        <input type="text" id="nama_depan" name="nama_depan" value="Budi"><br>
-        <label for="nama_belakang">Nama Belakang: </label><br>
-        <input type="text" id="nama_belakang" name="nama_belakang" value="Prawira"><br><br>
-        <input type="submit" value="Kirim">
-        <input type="reset" value="Reset">
-    </form>
+
+    <label for="username"> type "text" :</label><br>
+    <input type="text" id="username" name="username"><br>
+    <label for="pwd">type "Password":</label><br>
+    <input type="password" id="pwd" name="pwd"></br>
+
+    <br>
+
+
+    <hr>
+    <h3>Uji coba 2</h3>
+    <tr>
+    <input type="radio" id="html" value="HTML"> <label for="html">PAUS</label><br>
+    <input type="radio" id="css" value="CSS"> <label for="css">HIU</label><br>
+    <input type="radio" id="javascript" value="JavaScript"> <label for="javascript">TUNA</label>
+    </tr>
+    <p><Kode ini membuat formulir sederhana di mana pengguna dapat memilih satu dari tiga pilihan: HTML, CSS, atau JavaScript. 
+        Radio button memastikan hanya satu pilihan yang bisa dipilih. 
+        Bagian komentar disediakan untuk menganalisis pilihan pengguna dan menulis kesimpulan.></p>
+
+    <hr>
+    <h3>Uji coba 3</h3>
+    <input type="checkbox" id="id1" value="Bike">
+    <label for="id1"> I have a bike</label><br>
+    <input type="checkbox" id="id2" value="Car">
+    <label for="id2"> I have a car</label><br>
+    <input type="checkbox" id="id3" value="Boat">
+    <label for="id3"> I have a boat</label>
+    <p><Kode ini membuat formulir sederhana di mana pengguna dapat memilih beberapa kendaraan yang mereka miliki.
+         Bagian komentar disediakan untuk menganalisis pilihan pengguna dan menulis kesimpulan. 
+         Kesimpulan harus disesuaikan dengan pilihan pengguna pada formulir></p>
+
+    <hr>
+    <h3>Uji coba 4</h3>
+    <label for="favcolor">Pilih Warna dengan type="color":</label>
+    <input type="color" id="favcolor" name="favcolor"><br>
+    <label for="b">Pilih tanggal dengan type="date":</label>
+    <input type="date" id="b" name="tanggal"><br>
+    <input type="button" onclick="alert('Hello World!')" value="Click Me!"> <br>
+    <p><Kode ini menunjukkan contoh penggunaan elemen 
+        input "color", "date", dan "button" dalam HTML. 
+        Pengguna dapat memilih warna favorit, tanggal, 
+        dan memunculkan alert box dengan tombol "Click Me!".></p>
+
+    <hr>
+    <h3>Uji coba 5</h3>
+    <table>
+        <tr>
+          <td><label for="birthdaytime">Input dengan type datetime-local</label></td>
+          <td><input type="datetime-local" id="birthdaytime" name="birthdaytime"></td>
+        </tr>
+        <tr>
+          <td><label for="bdaymonth">Input dengan type month</label></td>
+          <td><input type="month" id="bdaymonth" name="bdaymonth"></td>
+        </tr>
+        <tr>
+          <td><label for="email">Enter your email</label></td>
+          <td><input type="email" id="email" name="email"></td>
+        </tr>
+      </table>
+      
+      <style>
+        td {
+          vertical-align: bottom;  /* Align label text at the bottom */
+          padding: 5px;           /* Add some padding for spacing */
+        }
+      </style>
+          
+    <p><Kode ini menunjukkan contoh penggunaan elemen input 
+        "datetime-local", "month", dan "email" dalam HTML. 
+        Formulir ini memungkinkan pengguna memasukkan informasi 
+        tanggal, waktu, bulan, tahun, dan alamat email mereka.></p>
+
+    <hr>
+    <h3>Uji coba 6</h3>
+    <input type="image" src="gambar/icon.png" alt="Submit" width="48" height="48"><br>
+    <label for="myfile">Pilih file:</label>
+    <input type="file" id="myfile" name="myfile"><br>
+    <input type="hidden" id="custId" name="custId" value="3487"><br>
+    <p><menampilkan formulir dengan elemen input untuk interaksi 
+        pengguna dan penyimpanan data. Elemennya meliputi tombol 
+        gambar untuk submit (dengan gambar "gambar/icon.png"), 
+        field upload file dengan id "myfile" dan name "myfile", 
+        dan hidden field "custId" dengan nilai "3487" untuk menyimpan data tersembunyi.></p>
+
+    <hr>
+    <h3>Uji coba 7</h3>
+    <label for="quantity">Quantity (between 1 and 5):</label>
+    <input type="number" id="quantity" name="quantity" min="1" max="10"> <br>
+    <label for="vol">Volume (between 0 and 50): </label>
+    <input type="range" id="vol" name="vol" min="0" max="50"><br>
+    <p><Menampilkan formulir yang memungkinkan pengguna memasukkan kuantitas 
+        (angka antara 1 dan 10) dan memilih volume (menggunakan slider) antara 0 dan 50.  
+        Label deskripsi disediakan untuk masing-masing input.></p>
+
+    <hr>
+    <h3>Uji coba 8</h3>
+    <table>
+        <tr>
+            <td><label for="homepage">Add your homepage:</label></td>
+            <td><input type="url" id="homepage" name="homepage"></td>
+        </tr>
+        <tr>
+            <td><label for="gsearch">Search Google:</label></td>
+            <td><input type="search" id="gsearch" name="gsearch"></td>
+        </tr>
+        <tr>
+            <td><label for="ph">Enter your phone number:</label></td>
+            <td><input type="tel" id="ph" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0- 0-9]{3}"></td>
+        </tr>
+    </table>
+
+    <style>
+        td {
+          vertical-align: bottom;  /* Align label text at the bottom */
+          padding: 5px;           /* Add some padding for spacing */
+        }
+      </style>
+    <p><Kodingan HTML tersebut membentuk formulir sederhana untuk pengguna. Formulir tersebut memungkinkan pengguna 
+        untuk memasukkan informasi seperti URL homepage, kata kunci pencarian Google, dan nomor telepon. Setiap elemen 
+        formulir memiliki label yang jelas untuk membantu pengguna memahami jenis informasi yang diminta. Pola validasi 
+        telah diterapkan pada input nomor telepon untuk memastikan format yang benar. Dengan demikian, formulir ini 
+        menyediakan antarmuka yang ramah pengguna untuk mengumpulkan informasi yang dibutuhkan.></p>
+
+            <hr>
+        <h3>Uji coba 9</h3>
+        <label for="appt">Select a time:</label><br>
+        <input type="time" id="appt" name="appt"><br>
+        <label for="week">Select a week: k: </label><br>
+        <input type="week" id="week" name="week" ><br>
+        <p><memungkinkan pengguna untuk memilih waktu dan minggu. 
+            Formulir ini menggunakan elemen input type="time"untuk 
+            memilih waktu dan input type="week" untuk memilih minggu dalam format yang ditentukan. 
+            Hal ini memungkinkan pengguna untuk dengan mudah memasukkan informasi yang relevan dalam 
+            aplikasi atau situs web yang bersangkutan.></p>
 </body>
 </html>
