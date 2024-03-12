@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Halaman HTML Nailah</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Zahy Nadhir">
+    <meta name="nim" content="233307060">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        header {
+            background-color: #666;
+            padding: 30px;
+            font-size: 35px;
+            color: white;
+        }
+        nav {
+            float: left;
+            width: 30%;
+            height: 450px;
+            background: #ccc;
+            padding: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: 450px;
+        }
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        @media (max-width: 600px) {
+            nav, article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Gambar Pemandangan</h2>
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gambar/gambar.jpg">Gambar</a></li>
+                <li><a href="event.html">Event</a></li>
+                <li><a href="gambar/audio">Audio</a></li>
+                <li><a href="svg.html">SVG</a></li>
+                <li><a href="canvas.html">Canvas</a></li>
+            </ul>
+        </nav>
+        <article>
+            <h1>Gambar yang Indah</h1>
+            <table>
+            <img src="gambar/gambar.jpg" alt="gmbr" width="200px" height="150">
+            <img src="gambar/gambar1.jpg" alt="gmbr" width="200px" height="150">
+            <img src="gambar/gambar2.jpg" alt="gmbr" width="200px" height="150">
+            <img src="gambar/gambar4.jpg" alt="gmbr" width="200px" height="150">
+            <img src="gambar/gambar5.jpg" alt="gmbr" width="200px" height="150">
+            <img src="gambar/gambar6.jpg" alt="gmbr" width="200px" height="150">
+        </article>
+    </section>
+
+    <footer>
+        <p>copyright @ZahyNadhir_233307060</p> 
+    </footer>
+</body>
+</html>
