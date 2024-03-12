@@ -1,36 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Halaman Beranda</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="Zahy Nadhir"> <!-- ubah dengan nama anda-->
-  <meta name="nim" content="233307060"> <!-- ubah dengan nim anda-->
-</head>
-<body>
-  <header>
-    <h2>Judul Website</h2>
-  </header>
-  <section>
-    <nav>
-      <a href="about.html">About</a> |
-      <a href="contact.html">Contact</a> |
-      <a href="services.html">Services</a>
-    </nav>
-    <article>
-        <h1>Video</h1>
-        <video controls autoplay width="200" height="150">
-            <source src="video/Skateboard.mp4" type="video/mp4">
-            Browser tidak mendukung.
-        </video>
-        <iframe width="200" height="150"
-            src="https://www.youtube.com/embed/fn3KWM1kuAw">
-        </iframe>
-        <p> kesimpulan: video akan diputar secara otomatis saat halaman dimuat</p>
-    </article>
-  </section>
-  <footer>
-    <p>copyright @ZahyNadhir_233307060</p> <!-- ubah sesuai selera anda -->
-  </footer>
-</body>
+    <head>
+        <title>Halaman Beranda</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Zahy Nadhir">
+        <meta name="nim" content="233307060">
+        <link rel="icon" type="img/png" href="gambar/icon.png">
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            header{
+                background-color: #666;
+                padding: 30px;
+                text-align: center;
+                font-size: 35px;
+                color: white;
+            }
+            nav{
+                float: left;
+                width: 30%;
+                height: 300px;
+                background: #ccc;
+                padding: 20px;
+            }
+            nav ul{
+                list-style-type: none;
+                padding: 0;
+            }
+            article{
+                float: left;
+                padding: 20px;
+                width: 70%;
+                background-color: #f1f1f1;
+                height: 300px;
+            }
+            section::after{
+                content: "";
+                display: table;
+                clear: both;
+            }
+            footer{
+                background-color: #777;
+                padding: 10px;
+                text-align: center;
+                color: white;
+            }
+            @media (max-width: 600px){
+                nav, article{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h2>Halaman video</h2>
+        </header>
+
+        <section>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gambar.html">Gambar</a></li>
+                    <li><a href="event.html">Event</a></li>
+                    <li><a href="audio.html">Audio</a></li>
+                    <li><a href="video.html">Video</a></li>
+                    <li><a href="svg.html">SVG</a></li>
+                    <li><a href="canvas.html">Canvas</a></li>
+                    <li><a href="pendaftaran.html">Pendaftaran</a></li>
+                </ul>
+            </nav>
+            <article>
+                <video width="400px" height="200px" controls autoplay muted>
+                    <source type="video/mp4" src="html_advance/gambar/video/Skateboard.mp4">
+                </video>
+            </article>
+        </section>
+
+        <footer>
+            <p>copyright@ZahyNadhir_233307060</p>
+        </footer>
+    </body>
 </html>
