@@ -1,31 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Halaman Beranda</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="Zahy Nadhir"> <!-- ubah dengan nama anda-->
-  <meta name="nim" content="233307060"> <!-- ubah dengan nim anda-->
-</head>
-<body>
-  <header>
-    <h2>Judul Website</h2>
-  </header>
-  <section>
-    <nav>
-      <a href="about.html">About</a> |
-      <a href="contact.html">Contact</a> |
-      <a href="services.html">Services</a>
-    </nav>
-    <article>
-      <h1>Welcome to My Website</h1>
-      <p>Thank you for visiting my website. Here you can learn more about me and my services. If you have any questions, please don't hesitate to contact me.</p>
-      <h2>My Services</h2>
-      <p>I offer a variety of services, including web design, graphic design, and social media management.</p>
-    </article>
-  </section>
-  <footer>
-    <p>copyright @ZahyNadhir_233307060</p> <!-- ubah sesuai selera anda -->
-  </footer>
-</body>
+    <head>
+        <title>Halaman Beranda zahy</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Zahy Nadhir">
+        <meta name="nim" content="233307060">
+        <link rel="icon" type="img/png" href="latihan 3/">
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            header{
+                background-color: #666;
+                padding: 30px;
+                text-align: center;
+                font-size: 35px;
+                color: white;
+            }
+            nav{
+                float: left;
+                width: 30%;
+                height: 300px;
+                background: #ccc;
+                padding: 20px;
+            }
+            nav ul{
+                list-style-type: none;
+                padding: 0;
+            }
+            article{
+                float: left;
+                padding: 20px;
+                width: 70%;
+                background-color: #f1f1f1;
+                height: 300px;
+            }
+            section::after{
+                content: "";
+                display: table;
+                clear: both;
+            }
+            footer{
+                background-color: #777;
+                padding: 10px;
+                text-align: center;
+                color: white;
+            }
+            @media (max-width: 600px){
+                nav, article{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h2>Halaman Home</h2>
+        </header>
+
+        <section>
+            <nav>
+                <ul>
+                    <li><a href="1_index.html">Home</a></li>
+                    <li><a href="2_gambar.html">Gambar</a></li>
+                    <li><a href="3_event.html">Event</a></li>
+                    <li><a href="4_audio.html">Audio</a></li>
+                    <li><a href="5_video.html">Video</a></li>
+                    <li><a href="6_svg.html">SVG</a></li>
+                    <li><a href="7_canvas.html">Canvas</a></li>
+                    <li><a href="8_pendaftaran.html">Pendaftaran</a></li>
+                </ul>
+            </nav>
+            <article>
+                <h1>Home</h1>
+                <!-- konten disini -->
+                <p> <!--Tulis kesimpulan hasil ujicoba disini--></p>
+            </article>
+        </section>
+
+        <footer>
+            <p>Rafi Putra</p> <!--ubah sesuai selera anda--->
+        </footer>
+    </body>
 </html>
