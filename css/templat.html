@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Halaman Beranda</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="zahy nadhir"> 
+    <meta name="nim" content="233307060">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        header {
+            background-color: blue;
+            padding: 10px;
+            text-align: left;
+            font-size: 35px;
+            color: yellow;
+            header 
+    
+}
+
+header h2 {
+    color: yellow;
+    margin-bottom: 0; /* Menghapus margin bottom */
+}
+
+header h4 {
+    color: white;
+    margin-top: 0; /* Menghapus margin top */
+}
+
+        nav {
+            float: left;
+            width: 20%; /* Mengubah lebar menjadi 20% dari kontainer induk */
+            height: 350px;
+            background: #ccc;
+            padding: 20px;
+            border-style: dashed;
+            border-width: 2px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        article {
+            float: left;
+            padding: 20px;
+            width: 80%; /* Mengubah lebar menjadi 80% dari kontainer induk */
+            background-color: #f1f1f1;
+            height: 350px;
+            text-align: center;
+        }
+
+        article p {
+            color: red;
+            font-size: 18px;
+        }
+
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .belajarhtml {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        footer {
+            background-color: #78cef5;
+            padding: 5px;
+            text-align: right;
+            color: rgb(10, 10, 10);
+        }
+        @media (max-width:600px) {
+            nav, article {
+                width: 100%; /* Mengubah lebar menjadi 100% pada layar berukuran kecil */
+                height: auto;
+            }
+        }
+        h1 {
+            font-size: 30px;
+            margin-bottom: 5px; /* Menambahkan margin bottom */
+        }
+
+
+
+        h2 {
+            margin-top: 5px; /* Menambahkan margin top */
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Hallo css !</h2>
+        <h4>Ini adalah website css saya</h4>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="Simpel.html">Menu1</a></li>
+                <li><a href="combinations.html">Menu2</a></li>
+                <li><a href="pesudo.html">Menu3</a></li>
+                <li><a href="pseudo_elemet.html">Menu4</a></li>
+                <li><a href="header.html">Menu5</a></li>
+                <li><a href="selector.html">Menu6</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <img src="gamb" width="120" height="120">
+            <h1>TI</h1>
+            <h2>Politeknik Negeri Madiun</h2>
+            <p>Mewujudkan pendidikan tinggi vokasi dalam bidang <br>
+                Teknologi informasi dan penerapannya yang berkualitas,<br>
+                inovatif,dan berdaya saing nasional</p>
+        </article>
+    </section>
+    <footer>
+        <p>Zahy Nadhir | 233307060 | TI-2B</p>
+    </footer>
+</body>
+</html>
