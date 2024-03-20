@@ -1,124 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Halaman Beranda</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="zahy nadhir"> 
-    <meta name="nim" content="233307060">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studi Kasus</title>
     <style>
-        * {
-            box-sizing: border-box;
-        }
         body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        header {
-            background-color: blue;
-            padding: 10px;
-            text-align: left;
-            font-size: 35px;
-            color: yellow;
-            header 
-    
-}
-
-header h2 {
-    color: yellow;
-    margin-bottom: 0; /* Menghapus margin bottom */
-}
-
-header h4 {
-    color: white;
-    margin-top: 0; /* Menghapus margin top */
-}
-
-        nav {
-            float: left;
-            width: 20%; /* Mengubah lebar menjadi 20% dari kontainer induk */
-            height: 350px;
-            background: #ccc;
-            padding: 20px;
-            border-style: dashed;
-            border-width: 2px;
-        }
-        nav ul {
-            list-style-type: none;
+            font-family: Arial, sans-serif;
+            margin: 0;
             padding: 0;
-        }
-        article {
-            float: left;
-            padding: 20px;
-            width: 80%; /* Mengubah lebar menjadi 80% dari kontainer induk */
-            background-color: #f1f1f1;
-            height: 350px;
-            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Mengatur tinggi minimum body sesuai tinggi layar */
         }
 
-        article p {
-            color: red;
-            font-size: 18px;
+        header {
+            background-color:#3161c9;
+            color: #ebfa63;
+            text-align: left;
+            padding: 10px 0;
+            margin-bottom: 10px; /* Jarak antara header dengan kontainer berikutnya */
+        }
+        header h1 {
+            color: #ebfa63; /* Warna kuning */
+            margin-bottom: 1px; /* Mengatur jarak bawah teks "Halo CSS!" */
         }
 
-        section::after {
-            content: "";
-            display: table;
-            clear: both;
+        header h3 {
+            color: #fff; /* Warna putih */
+            margin-top: 1px; /* Mengatur jarak atas teks "Ini adalah website CSS saya" */
         }
-        .belajarhtml {
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        .container {
+            display: flex;
+            flex-direction: row; /* Tata letak horizontal */
+            flex: 1; /* Mengisi sisa ruang di dalam body */
+        }
+
+        .sidebar {
+            background-color: #f4f4f4;
+            border: 2px dashed #4341aa;
+            flex: 0.5; /* Mengurangi nilai flex dari 1 menjadi 0.5 */
+        }
+        .sidebar nav ul {
+            list-style-type: none;
+            padding: 10px;
+        }
+        .sidebar nav ul li {
+            margin-bottom: 10px;
+        }
+        .sidebar nav ul li a {
+                color: #333;
+                text-decoration: none;
+        }
+        .sidebar nav ul li:nth-child(5) a {
+            color: #616bf0; /* Warna default untuk link Menu 5 */
+            text-decoration: none; /* Menghilangkan underline pada link */
+        }
+        .sidebar nav ul li:nth-child(6) a:hover {
+            color: red; /* Warna saat hover untuk link Menu 6 */
+            text-decoration: underline; /* Menambahkan underline pada hover */
+        }
+        .content {
+            background-color: #f9f9f9;
+            padding: 5px;
+            text-align: center; /* Mengatur teks menjadi di pinggir kiri */
+            flex: 1.5; /* Menambahkan nilai flex dari 2 menjadi 1.5 */
+            margin-left: 5px;
+        }
+        .content h1 {
+            color: #000000; /* Warna kuning */
+            margin-bottom: 1px; /* Mengatur jarak bawah teks "Halo CSS!" */
+        }
+        .content h3 {
+            color: #292b1f; /* Warna kuning */
+            margin-top: 1px; /* Mengatur jarak atas teks "Ini adalah website CSS saya" */
+        }
+        .content p {
+            color: #dd0000; /* Warna kuning */
+            margin-bottom: 1px; /* Mengatur jarak bawah teks "Halo CSS!" */
+            margin-top: 1px; /* Mengatur jarak atas teks "Ini adalah website CSS saya" */
         }
         footer {
-            background-color: #78cef5;
-            padding: 5px;
+            background-color: #83bfc7;
+            color: #000000;
             text-align: right;
-            color: rgb(10, 10, 10);
-        }
-        @media (max-width:600px) {
-            nav, article {
-                width: 100%; /* Mengubah lebar menjadi 100% pada layar berukuran kecil */
-                height: auto;
-            }
-        }
-        h1 {
-            font-size: 30px;
-            margin-bottom: 5px; /* Menambahkan margin bottom */
-        }
-      
-        h2 {
-            margin-top: 5px; /* Menambahkan margin top */
-            font-weight: normal;
+            padding: 10px 0;
+            width: 100%;
+            margin-top: 10px; /* Jarak antara footer dengan kontainer sebelumnya */
         }
     </style>
 </head>
 <body>
     <header>
-        <h2>Hallo css !</h2>
-        <h4>Ini adalah website css saya</h4>
+        <h1>Halo CSS !</h1>
+        <h3>Ini adalah website CSS saya</h3>
     </header>
-    <section>
-        <nav>
-            <ul>
-                <li><a href="Simpel.html">Menu1</a></li>
-                <li><a href="combinations.html">Menu2</a></li>
-                <li><a href="pesudo.html">Menu3</a></li>
-                <li><a href="pseudo_elemet.html">Menu4</a></li>
-                <li><a href="header.html">Menu5</a></li>
-                <li><a href="selector.html">Menu6</a></li>
-            </ul>
-        </nav>
-
-        <article>
-            <img src="gambar/icon.png" width="120" height="120">
+    <div class="container">
+        <div class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="margin.html">Menu 1</a></li>
+                    <li><a href="border-style.html">Menu 2</a></li>
+                    <li><a href="combination.html">Menu 3</a></li>
+                    <li><a href="simple.html">Menu 4</a></li>
+                    <li><a href="padding.html">Menu 5</a></li>
+                    <li><a href="hyperlink.html">Menu 6</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="content">
+            <img src="gambar/icon.png" width="15%" high="15%">
             <h1>TI</h1>
-            <h2>Politeknik Negeri Madiun</h2>
-            <p>Mewujudkan pendidikan tinggi vokasi dalam bidang <br>
-                Teknologi informasi dan penerapannya yang berkualitas,<br>
-                inovatif,dan berdaya saing nasional</p>
-        </article>
-    </section>
+            <h3>Politeknik negeri Madiun</h3>
+            <p>Mewujudkan pendidikan tinggi vokasi dalam bisang</p>
+            <p>Teknologi Informasi dan penerapannya yang berkualitas,</p>
+            <p>inofatif dan berdaya saing Nasional.</p>
+        </div>
+    </div>
     <footer>
-        <p>Zahy Nadhir | 233307060 | TI-2B</p>
+        <p>Zahy Nadhir N | 233307060 | TI-2B</p>
     </footer>
 </body>
 </html>
