@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jendela basic jQuery</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body>
+
+<button id="buka-dialog">Buka Dialog</button>
+
+<div id="dialog" title="Informasi">
+  <p>Ini adalah konten dalam jendela dialog.</p>
+</div>
+
+<script>
+$(document).ready(function(){
+    $("#dialog").dialog({
+        autoOpen: false, // Jendela dialog tidak terbuka secara otomatis saat halaman dimuat
+        modal: true, // Membuat jendela dialog sebagai modal (mengunci latar belakang)
+        buttons: {
+            "Tutup": function() {
+                $(this).dialog("close"); // Menutup jendela dialog saat tombol "Tutup" diklik
+            }
+        }
+    });
+
+    $("#buka-dialog").click(function(){
+        $("#dialog").dialog("open"); // Membuka jendela dialog saat tombol "Buka Dialog" diklik
+    });
+});
+</script>
+
+</body>
+</html>

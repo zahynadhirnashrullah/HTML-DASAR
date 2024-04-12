@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javacript confirm box</title>
+</head>
+<body>
+    <h2>javacript confirm box</h2>
+    <button onclick="myfunction()">klik ini</button>
+    <p id="demo"></p>
+    <script>
+        function myfunction() {
+            var txt ;
+            if (confirm("Apakah Anda Akan Logut ?")) {
+                txt = "Anda Mengklik Ok";
+            } else {
+                txt = "Anda Mengklik Cancel.";
+            }
+            document.getElementById("demo").innerHTML= txt;
+        }
+    </script>
+</body>
+</html>

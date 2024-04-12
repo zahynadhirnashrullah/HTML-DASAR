@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dialog</title>
+<style>
+body {
+  font-family: sans-serif;
+}
+
+#dialog-download {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 400px;
+  z-index: 100;
+}
+
+#dialog-download .title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#dialog-download .progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #ddd;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#dialog-download .progress-bar .progress {
+  width: 0%;
+  height: 100%;
+  background-color: #000;
+  border-radius: 5px;
+}
+
+#dialog-download .message {
+  margin-top: 10px;
+}
+
+#dialog-download .buttons {
+  margin-top: 10px;
+  text-align: right;
+}
+
+#dialog-download .buttons button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#dialog-download .buttons button:hover {
+  background-color: #ddd;
+}
+</style>
+</head>
+<body>
+<div id="dialog-download">
+  <div class="title">Download File</div>
+  <div class="progress-bar">
+    <div class="progress"></div>
+  </div>
+  <div class="message">Sedang mendownload file</div>
+  <div class="buttons">
+    <button id="cancel-button">Batal</button>
+  </div>
+</div>
+
+<script>
+const dialogDownload = document.getElementById("dialog-download");
+const progressBar = document.querySelector(".progress-bar .progress");
+const messageElement = document.querySelector(".message");
+const cancelButton = document.getElementById("cancel-button");
+
+// Fungsi untuk menampilkan dialog download
+function showDialogDownload() {
+  dialogDownload.style.display = "block";
+}
+
+// Fungsi untuk menyembunyikan dialog download
+function hideDialogDownload() {
+  dialogDownload.style.display = "none";
+}
+
+// Fungsi untuk memperbarui progressbar
+function updateProgress(progress) {
+  progressBar.style.width = `${progress}%`;
+}
+
+// Fungsi untuk menampilkan pesan
+function showMessage(message) {
+  messageElement.textContent = message;
+}
+
+// Menambahkan event listener pada tombol batal
+cancelButton.addEventListener("click", () => {
+  // Tampilkan pesan konfirmasi
+  if (confirm("Apakah Anda yakin ingin membatalkan download?")) {
+    // Sembunyikan dialog download
+    hideDialogDownload();
+  }
+});
+
+// Simulasikan proses download
+let progress = 0;
+const interval = setInterval(() => {
+  // Perbarui progressbar
+  updateProgress(progress);
+
+  // Tampilkan pesan jika download selesai
+  if (progress === 100) {
+    clearInterval(interval);
+    showMessage("Download selesai!");
+    setTimeout(() => {
+      // Sembunyikan dialog download setelah 2 detik
+      hideDialogDownload();
+    }, 2000);
+  }
+
+  // Simulasikan proses download
+  progress += Math.random() * 10;
+}, 100);
+
+// Tampilkan dialog download
+showDialogDownload();
+</script>
+</body>
+</html>

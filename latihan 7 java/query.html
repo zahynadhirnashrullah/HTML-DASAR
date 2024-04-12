@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jQuery</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+    /* CSS untuk styling menu */
+    .menu {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    .menu li {
+        display: inline-block;
+        margin-right: 20px;
+    }
+    .menu li a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    }
+    .menu li a:hover {
+        color: blue;
+    }
+</style>
+</head>
+<body>
+
+<ul class="menu">
+    <li><a href="#">Beranda</a></li>
+    <li><a href="#">Tentang Kami</a></li>
+    <li><a href="#">Layanan</a></li>
+    <li><a href="#">Kontak</a></li>
+</ul>
+
+<script>
+$(document).ready(function(){
+    // Ketika item menu di-klik
+    $(".menu li").click(function(){
+        // Menghapus kelas "aktif" dari semua item menu
+        $(".menu li").removeClass("aktif");
+        // Menambahkan kelas "aktif" ke item menu yang di-klik
+        $(this).addClass("aktif");
+    });
+});
+</script>
+
+</body>
+</html>

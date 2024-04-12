@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Real-Time Clock</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    #clock {
+        font-size: 2em;
+    }
+</style>
+</head>
+<body>
+<div id="clock"></div>
+<script>
+function updateClock() {
+    var now = new Date();
+    var date = now.toLocaleDateString();
+    var time = now.toLocaleTimeString();
+    document.getElementById('clock').innerHTML = "Tanggal: " + date + "<br>Jam: " + time;
+    setTimeout(updateClock, 1000); // Memperbarui setiap detik
+}
+
+updateClock(); // Memanggil fungsi updateClock saat halaman dimuat
+</script>
+</body>
+</html>
