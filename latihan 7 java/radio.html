@@ -38,13 +38,13 @@ Info:
 
 <script language="JavaScript">
     function info() {
-        for (var i=0; i<i; i++)
+        for (var i=0; i<document.formTes.radioMusik.length; i++) {
             if (document.formTes.radioMusik[i].checked) {
-                document.formTes.fieldMusik.value=
-                    document.formTes.radioMusik[i].value;
-    
-}
-}
+                document.formTes.fieldMusik.value = document.formTes.radioMusik[i].value;
+                break;
+            }
+        }
+    }
 </script>
 </body>
 </html>
