@@ -17,29 +17,30 @@
 
 <?php
 
-/* operator logika yang bisa di gunakan
-* ==    sama dengan         $x==$y
-* ===   identicial          $x===$y
-* !=    tidak sama dengan   $x! =$y
-* <>    tidak sama dengan   $x <> $y
-* !==   not identical       $x !== $y
-* >     lebih besar dari    $x>$y
-* <     kurang dari         $x<$y
-* >=    lebih besar dari atau sama dengan   $x>=$y
-* <=    kurang dari atau sama dengan        $x<=$y
-* <=>   spaceship                           $x <=> $y
-*/
- 
-$t = date(format:"H"); // mendapatkan jam dengan format 24 jam
-echo "<br> nested if <br>";
-if ($t < 16) {
-    echo "selamat pagi!";
-} elseif ($t < 16) {
-    echo "selamat siang!";
-} else {
-    echo "selamat malam!";
-}
-?>
+    $t = date( "H" ); //mendapatkan jam dengan format 1-24
+    echo "if";
+    if ($t < 16) {
+        echo "Selamat siang!";
+    }
+
+    $t = date("H"); //mendapatkan jam dengan format 1-24
+    echo "<br> If dan Else <br>";
+    if ($t < 20) {
+        echo "Selamat siang!";
+    } else {
+        echo "Selamat malam!";
+    }
+
+    echo "<br> Nested If <br>";
+    if ($t < 20) {
+        echo "Selamat pagi!";
+    } elseif ($t < 16) {
+        echo "Selamat sore!";
+    } else {
+        echo "Selamat Malam!";
+    }
+
+    ?>
 
 </body>
 </html>

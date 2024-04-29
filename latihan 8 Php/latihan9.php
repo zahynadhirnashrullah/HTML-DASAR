@@ -17,7 +17,7 @@
 <?php
 
 // contoh fungsi
-function writemsg ($nama) {
+function writeMsg($nama) {
     echo "selamat datang".$nama."<br>" ;
 }
 writemsg(nama:"zahy"); // pemanggilan fungsi
